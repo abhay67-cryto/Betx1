@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviator Game Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Aviator Game</h1>
+    <p>Balance: ₹<span id="balance">1000</span></p>
+
+    <input type="number" id="bet" placeholder="Enter Bet Amount" />
+    <button onclick="startGame()">Start Game</button>
+
+    <div id="gameArea">
+      <p>Multiplier: x<span id="multiplier">1.00</span></p>
+      <button id="cashoutBtn" onclick="cashOut()" disabled>Cash Out</button>
+    </div>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
