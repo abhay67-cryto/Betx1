@@ -1,23 +1,60 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #111;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0b0f1a;
   color: #fff;
   text-align: center;
-  padding: 20px;
 }
 
-.container {
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
+.game-container {
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+  color: #f44336;
 }
 
 input, button {
   padding: 10px;
-  margin: 10px;
+  margin: 10px 5px;
   font-size: 16px;
 }
+
 button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+}
+
+button:disabled {
+  background: #888;
+}
+
+.game-display {
+  margin-top: 40px;
+}
+
+.plane-area {
+  position: relative;
+  height: 150px;
+  background: #111;
+  border: 2px solid #444;
+  margin: 20px auto;
+  width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.plane {
+  width: 50px;
+  height: 50px;
+  background: url('https://img.icons8.com/ios-filled/50/f44336/airplane-take-off.png') no-repeat center;
+  background-size: contain;
+  position: absolute;
+  top: 40px;
+  left: 0%;
+  transition: left 0.3s linear;
 }

@@ -2,26 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aviator Game Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aviator Pro</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Aviator Game</h1>
-    <p>Balance: ₹<span id="balance">1000</span></p>
+  <div class="game-container">
+    <header>
+      <h1>Aviator Pro</h1>
+      <p>Balance: ₹<span id="balance">1000</span></p>
+    </header>
 
-    <input type="number" id="bet" placeholder="Enter Bet Amount" />
-    <button onclick="startGame()">Start Game</button>
+    <section class="game-controls">
+      <input type="number" id="bet" placeholder="Enter Bet Amount" />
+      <button onclick="startGame()" id="startBtn">Start</button>
+      <button onclick="cashOut()" id="cashoutBtn" disabled>Cash Out</button>
+    </section>
 
-    <div id="gameArea">
-      <p>Multiplier: x<span id="multiplier">1.00</span></p>
-      <button id="cashoutBtn" onclick="cashOut()" disabled>Cash Out</button>
-    </div>
-
-    <p id="status"></p>
+    <section class="game-display">
+      <div class="plane-area">
+        <p>Multiplier: x<span id="multiplier">1.00</span></p>
+        <div class="plane" id="plane"></div>
+      </div>
+      <p id="status"></p>
+    </section>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
